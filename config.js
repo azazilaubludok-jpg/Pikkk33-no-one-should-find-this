@@ -1,6 +1,6 @@
 // Вставь сюда данные из Supabase → Project Settings → API.
-// anon-ключ публичный по задумке: доступ ограничивают правила в supabase/schema.sql.
+// anon/publishable-ключ публичный по задумке: доступ ограничивают правила в supabase/schema.sql.
 window.STENKA_CONFIG = {
-  url: "",      // например "https://abcdefgh.supabase.co"
-  anonKey: "",  // длинная строка "eyJ..."
+  url: "https://zhfibonssynyepybhqeu.supabase.co",
+  anonKey: "sb_publishable_drkpAmOQptsilgE_BaU_xQ_zLGvMdv6",
 };
