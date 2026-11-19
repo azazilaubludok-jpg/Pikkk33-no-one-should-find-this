@@ -13,6 +13,10 @@ create index if not exists posts_created_at_idx on public.posts (created_at desc
 -- Доступ: читать и писать могут все, менять и удалять — никто (кроме тебя из панели Supabase).
 alter table public.posts enable row level security;
 
+-- Новые проекты Supabase не дают гостям доступ к таблицам сами — выдаём явно.
+grant select, insert on public.posts to anon, authenticated;
+grant usage on sequence public.posts_id_seq to anon, authenticated;
+
 drop policy if exists "все читают" on public.posts;
 create policy "все читают" on public.posts
   for select to anon, authenticated using (true);
